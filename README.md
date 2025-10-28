@@ -177,11 +177,3 @@ The Mongoose schemas and TypeScript interfaces are defined in `api/helper/config
 This project uses an ISC license (see `package.json`).
 
 ---
-
-If you want, I can now:
-
-- Add the `/health` endpoint and wire it to the OpenAPI docs.
-- Implement the global + stricter auth rate limiting (Redis-backed) and update `docker-compose.yml` with the Redis limiter store.
-- Add a GitHub Actions workflow that builds the image and runs smoke tests.
-
-Tell me which of these you'd like me to implement next and I'll proceed.
