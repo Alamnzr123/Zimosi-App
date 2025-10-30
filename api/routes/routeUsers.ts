@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import ControllerUsers from '../controllers/controllerUsers.ts';
+import ControllerUsers from '../controllers/controllerUsers.js';
 
 /**
  * @openapi

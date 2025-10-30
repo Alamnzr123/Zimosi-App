@@ -1,4 +1,4 @@
-import client from '../helper/config_redis.ts';
+import client from '../helper/config_redis.js';
 import { Request, Response, NextFunction } from 'express';
 
 const hitProductAll = async (req: Request, res: Response, next: NextFunction) => {

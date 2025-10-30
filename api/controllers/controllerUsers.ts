@@ -1,4 +1,4 @@
-import { Users, IUser } from '../helper/config.ts';
+import { Users, IUser } from '../helper/config.js';
 import { Request, Response, NextFunction } from 'express';
 
 type ParamsWithId = { UsersId?: string };

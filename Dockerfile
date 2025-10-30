@@ -9,8 +9,10 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 # Copy source and build
+# Copy full source and run build (explicit diagnostics to surface errors during image build)
 COPY . .
-RUN npm run build
+# Run TypeScript build in builder
+RUN npx tsc --build
 
 #############################
 # Production stage
@@ -22,8 +24,8 @@ WORKDIR /usr/src/app
 COPY package.json package-lock.json* ./
 RUN npm ci --omit=dev
 
-# Copy compiled output from builder
-COPY --from=builder /usr/src/app/dist ./dist
+# Copy compiled output from build context (host dist) into the image
+COPY ./dist ./dist
 
 EXPOSE 3000
 

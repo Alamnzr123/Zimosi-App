@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import rateLimit from 'express-rate-limit';
-import routeUsers from './routeUsers.ts';
-import routeTasks from './routeTasks.ts';
-import env from '../helper/env.ts';
+import routeUsers from './routeUsers.js';
+import routeTasks from './routeTasks.js';
+import env from '../helper/env.js';
 const router = express.Router();
 
 // Use validated environment variables and fallback to local Mongo when not provided.

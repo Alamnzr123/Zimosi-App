@@ -132,7 +132,7 @@ Add or expand JSDoc `@openapi` comments in routes/controllers to improve the gen
 
 ## Health & readiness
 
-The project includes improved error handling and will expose health endpoints (recommendation). If a `/health` endpoint is not present, you can add one that checks Mongo and Redis connectivity and returns 200/503 accordingly. I can add this for you and include it in the OpenAPI definition.
+The project includes improved error handling and will expose health endpoints (recommendation). If a `/health` endpoint is not present, you can add one that checks Mongo and Redis connectivity and returns 200/503 accordingly
 
 ## Security & Rate Limiting
 

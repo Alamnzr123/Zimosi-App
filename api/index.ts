@@ -1,7 +1,7 @@
 import express from 'express';
-import logger from './helper/logger.ts';
+import logger from './helper/logger.js';
 import swaggerUi from 'swagger-ui-express';
-import swaggerSpec from './helper/swagger.ts';
+import swaggerSpec from './helper/swagger.js';
 const app = express();
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 import path from "path";
@@ -9,8 +9,8 @@ import path from "path";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import cors from "cors";
-import router from "./routes/index.ts";
-import errorHandler from "./middlewares/errorHandler.ts";
+import router from "./routes/index.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 // Hook morgan into winston so HTTP logs are structured
 app.use(morgan('combined', { stream: { write: (msg: string) => logger.info(msg.trim()) } }));

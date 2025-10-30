@@ -1,10 +1,10 @@
-import { Notification, Tasks, TasksHistory, TasksComment, UserTasks, Users, ITask, IUser } from '../helper/config.ts';
+import { Notification, Tasks, TasksHistory, TasksComment, UserTasks, Users, ITask, IUser } from '../helper/config.js';
 
 import { Queue, Worker, QueueEvents } from "bullmq";
 import jwt from "jsonwebtoken";
-import Role from "../helper/role.ts";
-import config from "../helper/secret_key.ts";
-import client from '../helper/config_redis.ts';
+import Role from "../helper/role.js";
+import config from "../helper/secret_key.js";
+import client from '../helper/config_redis.js';
 import { Request, Response, NextFunction } from 'express';
 
 const ControllerOperator = {

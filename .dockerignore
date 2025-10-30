@@ -4,5 +4,4 @@ Dockerfile
 docker-compose.yml
 .git
 .vscode
-dist
 coverage

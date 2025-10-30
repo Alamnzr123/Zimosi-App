@@ -1,11 +1,11 @@
 import express from 'express';
 const router = express.Router();
-import ControllerTasks from '../controllers/controllerTasks.ts';
-import jwt from "../helper/jwt.ts";
-import Role from "../helper/role.ts";
-import { hitProductAll } from '../middlewares/redis.ts';
-import { validateData } from '../middlewares/validationUserSchema.ts';
-import { userCreateSchema } from '../helper/userSchema.ts';
+import ControllerTasks from '../controllers/controllerTasks.js';
+import jwt from "../helper/jwt.js";
+import Role from "../helper/role.js";
+import { hitProductAll } from '../middlewares/redis.js';
+import { validateData } from '../middlewares/validationUserSchema.js';
+import { userCreateSchema } from '../helper/userSchema.js';
 
 router.get('/rate-limit-3', ControllerTasks.listen);
 router.post('/authenticate', ControllerTasks.authentication);

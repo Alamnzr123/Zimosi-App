@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import logger from '../helper/logger.ts';
+import logger from '../helper/logger.js';
 
 function errorHandler(err: any, req: Request, res: Response, next: NextFunction) {
     const id = `${Date.now()}-${Math.floor(Math.random() * 1000)}`;

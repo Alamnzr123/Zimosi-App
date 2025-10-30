@@ -1,5 +1,5 @@
-import { verify } from 'jsonwebtoken';
-import config from './secret_key.ts';
+import jwt from 'jsonwebtoken';
+import config from './secret_key.js';
 import { Request, Response, NextFunction } from 'express';
 
 function jwtVerify(role: Array<any> = [], status: Array<any> = []) {
@@ -29,7 +29,7 @@ function jwtVerify(role: Array<any> = [], status: Array<any> = []) {
 
       try {
         // Require HS256 explicitly to avoid algorithm confusion
-        const verified = verify(token, secret as any, { algorithms: ['HS256'] }) as any;
+  const verified = (jwt as any).verify(token, secret as any, { algorithms: ['HS256'] }) as any;
         req.user = verified;
         return next();
       } catch (err: any) {

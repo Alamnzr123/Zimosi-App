@@ -9,7 +9,8 @@ const options = {
       description: 'API documentation for Zimosi App',
     },
   },
-  apis: ['./api/routes/*.ts', './api/controllers/*.ts'],
+  // Include both source .ts for JSDoc generation and emitted .js files for runtime accuracy
+  apis: ['./api/routes/*.ts', './api/controllers/*.ts', './api/routes/*.js', './api/controllers/*.js'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);

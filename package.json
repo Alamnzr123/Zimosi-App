@@ -8,6 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx tsx api/index.ts index.ts",
     "build": "tsc --build",
+    "docker:build": "docker build -t backend-zimosi-2025 .",
+    "docker:build:host": "npx tsc --build && docker build -t backend-zimosi-2025 .",
     "start:prod": "node dist/index.js"
   },
   "keywords": [],
